@@ -14,10 +14,10 @@ def question1():
     answers["(d)"] = "yes"
 
     # explain-string: explanation in english prose
-    answers["(a) explain"] = "Rules are not mutually exclusive because more than one rule can apply to a set of attributes simultaneously."
-    answers["(b) explain"] = "The rule set is not exhaustive as there are attribute combinations not covered by any rule."
-    answers["(c) explain"] = "Ordering is needed because the application of some rules before others can affect the classification outcome."
-    answers["(d) explain"] = "A default class is necessary for handling attribute combinations that do not match any of the provided rules."
+    answers["(a) explain"] = "Rules are not mutually exclusive because they can simultaneously apply to a set of attributes."
+    answers["(b) explain"] = "The rule set is not exhaustive because it does not cover all possible attribute combinations."
+    answers["(c) explain"] = "Ordering is necessary because the application sequence of certain rules can impact the classification result."
+    answers["(d) explain"] = "A default class is essential for managing attribute combinations that do not match any of the specified rules."
 
     return answers
 
@@ -51,9 +51,9 @@ def question3():
     answers["(c)"] = "no"
 
     # explain-string: explanation in english prose
-    answers["(a) example"] = "Each rule specifies a unique combination of attributes, making them mutually exclusive."
-    answers["(b) example"] = "Not all possible combinations of attributes are covered, indicating the rules are not exhaustive."
-    answers["(c) example"] = "Since the rules are mutually exclusive, their order of application does not change the outcome."
+    answers["(a) example"] = "Each rule specifies a unique combination of attributes, which makes them mutually exclusive."
+    answers["(b) example"] = "The rules are not exhaustive because they do not cover all possible attribute combinations."
+    answers["(c) example"] = "The outcome remains unchanged regardless of the order of application because the rules are mutually exclusive."
 
 
     return answers
@@ -68,10 +68,10 @@ def question7():
     answers["(d)"] = False
 
     # explain_string: explanation in english prose
-    answers["(a) explain"] = "In back-propagation, the error gradient for each layer is computed based on the gradient of the subsequent layer, utilizing the chain rule."
-    answers["(b) explain"] = "The activations at the (k+1)th layer are computed using the activations at the kth layer through forward propagation."
-    answers["(c) explain"] = "The vanishing gradient problem refers to gradients becoming small as error is propagated back, not training errors vanishing to zero."
-    answers["(d) explain"] = "Even if the ANN model classifies all training instances correctly, gradients of loss with respect to weights could still be nonzero."
+    answers["(a) explain"] = "The error gradient for each layer in backpropagation is computed using the gradient of the subsequent layer, employing the chain rule."
+    answers["(b) explain"] = "The activations at layer (k+1) are calculated by propagating forward the activations from layer k."
+    answers["(c) explain"] = "The vanishing gradient problem occurs when gradients shrink substantially as they propagate backward, rather than training errors diminishing to zero."
+    answers["(d) explain"] = "Even if the ANN model accurately classifies all training instances, the gradients of the loss with respect to weights may still not be zero."
 
     return answers
 
@@ -137,7 +137,7 @@ def question10():
     answers["(a) P(C=1|-)"] = 0.2
 
     # type: explanatory string
-    answers["(a) P(A=1|+) explain your answer"] = "if most of the time when A is 1, the outcome is positive, then we think A=1 makes a positive outcome likely."
+    answers["(a) P(A=1|+) explain your answer"] = "If A being 1 often results in a positive outcome, we consider A=1 to be indicative of a likely positive outcome."
   
     # type: float
     # note: R is the sample (A=1,B=1,C=1)
@@ -149,7 +149,7 @@ def question10():
     answers["(b) class label"] = "+"
 
     # explain_string
-    answers["(b) Explain your reasoning"] = "To guess if something is positive or negative, we use what we learned from counting and see which outcome looks more likely based on our counts."
+    answers["(b) Explain your reasoning"] = "To predict whether something is positive or negative, we apply our counting-based knowledge to determine which outcome appears more probable."
   
     # float
     answers["(c) P(A=1)"] = 0.5
@@ -176,7 +176,7 @@ def question10():
     answers["(e) A independent of B given class +?"] = "no"
 
     # type: explanatory string
-    answers["(e) A and B conditionally independent given class +, explain"] =  "We look again with our counts, but this time we check if knowing the outcome ahead of time changes how we think A and B are related. If not, then A and B don’t give us any new clues when we already know the outcome."
+    answers["(e) A and B conditionally independent given class +, explain"] =  "Upon reevaluation using our counts, we assess whether foreknowledge of the outcome alters our perception of the relationship between A and B. If not, then A and B do not provide additional insights when the outcome is already known."
   
     return answers
 # --------------------------------------------------------
